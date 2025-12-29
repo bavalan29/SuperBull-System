@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Superbull Internal System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <div class="sidebar">
+    <h2>CT8</h2>
+    <button onclick="show('announcement')">Announcement</button>
+    <button onclick="show('subaccount')">Sub Account</button>
+    <button onclick="show('user')">User</button>
+    <button onclick="show('site')">Site</button>
+    <button onclick="show('quickcontra')">Quick Contra</button>
+    <button onclick="show('nettransfer')">Net Transfer</button>
+    <button onclick="show('report')">Report Win / Lose</button>
+    <button onclick="show('listing')">Transaction Listing</button>
+    <button onclick="show('log')">Transaction Log</button>
+  </div>
+
+  <div class="content">
+    <h1>Superbull Internal System</h1>
+
+    <section id="announcement" class="box">Announcement (admin + user)</section>
+    <section id="subaccount" class="box">Sub Account (future)</section>
+
+    <section id="user" class="box">
+      <input id="userCode" placeholder="User Code">
+      <button onclick="addUser()">Add User</button>
+      <pre id="userOut"></pre>
+    </section>
+
+    <section id="site" class="box">
+      <input id="siteCode" placeholder="Site Code (CJ888)">
+      <input id="userCol" placeholder="User Col">
+      <input id="netCol" placeholder="Net Col">
+      <button onclick="addSite()">Add Site</button>
+      <pre id="siteOut"></pre>
+    </section>
+
+    <section id="nettransfer" class="box">
+      <textarea id="rawData" placeholder="Paste raw site data here"></textarea>
+      <button onclick="processNet()">Process</button>
+      <pre id="netOut"></pre>
+    </section>
+
+    <section id="report" class="box">
+      <button onclick="refreshReport()">Refresh Report</button>
+      <pre id="reportOut"></pre>
+    </section>
+
+    <section id="quickcontra" class="box">
+      Quick Contra (split PAY → multiple RECEIVE)
+    </section>
+
+    <section id="listing" class="box">
+      Transaction Listing (editable later)
+    </section>
+
+    <section id="log" class="box">
+      Transaction Log (read-only)
+      <pre id="logOut"></pre>
+    </section>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
 
